@@ -13,7 +13,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # CSS FW
-gem 'bootstrap', '4.1.1'
+gem 'bootstrap', '4.3.1'
 
 group :development, :test do
   gem 'pry-rails'
