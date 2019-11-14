@@ -1,0 +1,18 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV["DB_USERNAME"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
+  socket: /tmp/mysql.sock
+development:
+  <<: *default
+  database: cmpl_development
+test:
+  <<: *default
+  database: cmpl_test
+production:
+  <<: *default
+  database: cmpl_production
+  username: cmpl
+  password: <%= ENV['CMPL_DATABASE_PASSWORD'] %>
