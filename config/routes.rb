@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   end
 
   root 'home#index'
+
+  match  '*path' => 'home#index', via: [:get]
 end
