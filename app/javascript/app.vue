@@ -22,7 +22,7 @@
         component: HomeIndex
       },
       {
-        path: 'join',
+        path: '/join',
         component: UserNew
       },
       {
