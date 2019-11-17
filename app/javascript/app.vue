@@ -8,13 +8,26 @@
   import Vue from 'vue'
   import VueRouter from 'vue-router'
 
+  // Home
   import HomeIndex from 'home/index.vue'
+  // Users
+  import UserNew from 'users/new.vue'
 
   const router = new VueRouter({
+    mode: 'history',
+    hash: false,
     routes: [
       {
         path: '/',
         component: HomeIndex
+      },
+      {
+        path: 'join',
+        component: UserNew
+      },
+      {
+        path: '*',
+        redirection: '/'
       }
     ]
   })
