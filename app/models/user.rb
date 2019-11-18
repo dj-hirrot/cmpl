@@ -1,8 +1,9 @@
 class User < ApplicationRecord
-  # :confirmable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :trackable
+         :trackable, :confirmable
 
   validates :password, length: { minimum: 10 }
+
+  include DeviseTokenAuth::Concerns::User
 end
