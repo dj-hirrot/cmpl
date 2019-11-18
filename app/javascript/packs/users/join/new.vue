@@ -7,7 +7,7 @@
 
 <script>
   import axios from 'axios'
-  import FormPane from './form_pane.vue'
+  import FormPane from '../components/form_pane.vue'
 
   export default {
     components: {

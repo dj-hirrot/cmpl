@@ -11,7 +11,7 @@
   // Home
   import HomeIndex from 'packs/home/index.vue'
   // Users
-  import UserNew from 'packs/users/new.vue'
+  import UserNew from 'packs/users/join/new.vue'
 
   const router = new VueRouter({
     mode: 'history',
