@@ -9,9 +9,9 @@
   import VueRouter from 'vue-router'
 
   // Home
-  import HomeIndex from 'home/index.vue'
+  import HomeIndex from 'packs/home/index.vue'
   // Users
-  import UserNew from 'users/new.vue'
+  import UserNew from 'packs/users/new.vue'
 
   const router = new VueRouter({
     mode: 'history',
