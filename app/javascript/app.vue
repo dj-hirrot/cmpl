@@ -11,7 +11,8 @@
   // Home
   import HomeIndex from 'packs/home/index.vue'
   // Users
-  import UserNew from 'packs/users/registrations/new.vue'
+  import UserJoin from 'packs/users/registrations/new.vue'
+  import UserLogin from 'packs/users/sessions/new.vue'
 
   const router = new VueRouter({
     mode: 'history',
@@ -24,7 +25,11 @@
       },
       {
         path: '/join',
-        component: UserNew
+        component: UserJoin
+      },
+      {
+        path: '/login',
+        component: UserLogin
       },
       {
         path: '*',
