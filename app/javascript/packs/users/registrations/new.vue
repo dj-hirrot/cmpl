@@ -39,7 +39,7 @@
     data() {
       return {
         user: {
-          username: '',
+          name: '',
           email: '',
           password: ''
         },
@@ -49,7 +49,7 @@
     methods: {
       submitUserForm: function() {
         axios
-          .post(`api/v1/users`, this.user)
+          .post(`api/v1/auth`, this.user)
           .then(response => {
             let e = response.data;
             this.$router.push({ name: "HomeIndex", notice: "JOINED" });
