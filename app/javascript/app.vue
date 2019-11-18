@@ -19,7 +19,8 @@
     routes: [
       {
         path: '/',
-        component: HomeIndex
+        component: HomeIndex,
+        name: "HomeIndex"
       },
       {
         path: '/join',
