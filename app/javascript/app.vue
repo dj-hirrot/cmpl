@@ -23,7 +23,7 @@
         name: "HomeIndex"
       },
       {
-        path: '/registrations',
+        path: '/join',
         component: UserNew
       },
       {
