@@ -17,6 +17,7 @@ gem 'bootstrap', '~> 4.3.1'
 
 # User activate
 gem 'devise'
+gem 'devise_token_auth'
 
 group :development, :test do
   gem 'pry-rails'
