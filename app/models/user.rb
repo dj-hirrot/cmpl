@@ -7,7 +7,6 @@ class User < ApplicationRecord
                        uniqueness: { case_sensitive: true },
                        length: { minimum: 5, maximum: 20 },
                        format: { with: /\A[a-zA-Z0-9]+\z/ }
-  validates :password, length: { minimum: 10 }
 
   include DeviseTokenAuth::Concerns::User
 end
