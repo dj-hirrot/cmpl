@@ -8,7 +8,7 @@
 
     <div>
       <label>USERNAME</label>
-      <input v-model="user.name" type="text">
+      <input v-model="user.username" type="text">
     </div>
 
     <div>
@@ -39,7 +39,7 @@
     data() {
       return {
         user: {
-          name: '',
+          username: '',
           email: '',
           password: ''
         },
