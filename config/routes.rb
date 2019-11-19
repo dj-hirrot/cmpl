@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   match  '*path' => 'home#index', via: [:get]
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
 end
