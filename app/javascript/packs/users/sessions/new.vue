@@ -8,7 +8,7 @@
 
     <div>
       <label>USERNAME or EMAIL</label>
-      <input v-model="user.username" type="text">
+      <input v-model="user.email" type="text">
     </div>
 
     <div>
@@ -34,7 +34,6 @@
     data() {
       return {
         user: {
-          username: '',
           email: '',
           password: ''
         },
@@ -44,7 +43,7 @@
     methods: {
       submitUserForm: function() {
         axios
-          .post(`api/v1/users/sign_in`, this.user)
+          .post(`api/v1/auth/sign_in`, this.user)
           .then(response => {
             let e = response.data;
             this.$router.push({ name: "HomeIndex", notice: "JOINED" });
