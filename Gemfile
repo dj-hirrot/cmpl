@@ -15,7 +15,12 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # CSS FW
 gem 'bootstrap', '~> 4.3.1'
 
+# User activate
+gem 'devise'
+gem 'devise_token_auth'
+
 group :development, :test do
+  gem 'letter_opener_web'
   gem 'pry-rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
