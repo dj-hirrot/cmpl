@@ -45,6 +45,9 @@
         axios
           .post(`api/v1/auth/sign_in`, this.user)
           .then(response => {
+            document.cookie = 'access-token=' + response.headers['access-token'];
+            document.cookie = 'client=' + response.headers['client'];
+            document.cookie = 'uid=' + response.headers['uid'];
             let e = response.data;
             this.$router.push({ name: "HomeIndex", notice: "JOINED" });
           })
