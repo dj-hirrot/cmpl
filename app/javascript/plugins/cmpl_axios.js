@@ -10,12 +10,14 @@ export default CMPLAxiosPlugin.install = function(Vue, { axios }) {
 
   for (var c of cookiesArray) {
     var cv = c.split('=');
-    if (cv[0] === 'access-token') {
-      access_token = cv[1];
-    } else if (cv[0] === 'client') {
-      client = cv[1]
-    } else if (cv[0] === 'uid') {
-      uid = cv[1]
+    var key = cv[0].replace(' ', '');
+    var value = cv[1];
+    if (key === 'access-token') {
+      access_token = value;
+    } else if (key === 'client') {
+      client = value;
+    } else if (key === 'uid') {
+      uid = value;
     }
   }
 
