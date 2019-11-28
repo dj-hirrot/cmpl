@@ -6,6 +6,7 @@ export default CMPLAxiosPlugin.install = function(Vue, { axios }) {
   var uid = '';
   const cookies = document.cookie;
   const cookiesArray = cookies.split(';');
+  const csrf_token = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
 
   for (var c of cookiesArray) {
     var cv = c.split('=');
@@ -18,7 +19,6 @@ export default CMPLAxiosPlugin.install = function(Vue, { axios }) {
     }
   }
 
-  const csrf_token = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
   axios.defaults.headers.common = {
     "X-Requested-With": "XMLHttpRequest",
     "X-CSRF-Token": csrf_token,
